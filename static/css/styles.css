@@ -1,0 +1,85 @@
+/* styles.css */
+
+/* Define a fonte padrão para o corpo da página */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/* Estiliza o cabeçalho */
+header {
+    background-color: #14804d;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+}
+
+/* Estiliza o título principal */
+header h1 {
+    margin: 0;
+    font-size: 2em;
+}
+
+/* Estiliza o contêiner principal */
+.container {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Estiliza o formulário de entrada */
+.input-form {
+    margin-bottom: 20px;
+}
+
+.input-form input[type="text"] {
+    width: calc(100% - 100px);
+    padding: 10px;
+    margin-right: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.input-form input[type="submit"] {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    background-color: #17a161;
+    color: white;
+    cursor: pointer;
+}
+
+.input-form input[type="submit"]:hover {
+    background-color: #17a161;
+}
+
+/* Estiliza a seção de resultados */
+.resultados {
+    margin-top: 20px;
+}
+
+.resultados table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.resultados th, .resultados td {
+    padding: 10px;
+    border: 1px solid #ddd;
+    text-align: left;
+}
+
+.resultados th {
+    background-color: #f4f4f4;
+}
+
+/* Estiliza as mensagens de erro */
+.erro {
+    color: red;
+    font-weight: bold;
+}

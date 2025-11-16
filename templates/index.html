@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap">
+    <link rel="icon" type="image/png" href="https://www.unifeso.edu.br/images/favicon.png" />
+    <title>Projeto 02</title>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>PROJETO 02 - Docker + PostgreSQL</h1>
+        </header>
+        
+        <section class="input-form">
+            <form action="/" method="post">
+                <input type="text" name="comandoSQL" placeholder="Digite seu comando SQL">
+                <input type="submit" value="Enviar">
+            </form>
+            {% if erro %} <!-- sintaxe Jinja2 --> 
+                <div class="erro">{{ erro }} <!-- sintaxe Jinja2 --> </div>
+            {% endif %} <!-- sintaxe Jinja2 --> 
+        </section>
+        
+        <!-- OBJETIVO OBRIGATÓRIO -->
+        <section class="resultados">
+            {% if consulta_resultado %} <!-- sintaxe Jinja2 --> 
+                <hr/>
+                <table>
+                    <thead>
+                        <tr>
+                                    {% for coluna in colunas %}
+                                        <th>{{ coluna }}</th>
+                                    {% endfor %}
+                                </tr>
+                            </thead>                                                  
+                            <tbody>
+                                {% for linha in consulta_resultado %}
+                                    <tr>
+                                        {% for valor in linha %}
+                                            <td>{{ valor }}</td>
+                                        {% endfor %}
+                                    </tr>
+                                {% endfor %}
+                            </tbody>
+                            
+                </table>
+            {% endif %}
+        </section>
+    </div>
+</body>
+</html>
